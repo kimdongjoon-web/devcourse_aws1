@@ -11,5 +11,4 @@ class DevcourseAws1ApplicationTests {
     @Test
     void contextLoads() {
     }
-
 }
