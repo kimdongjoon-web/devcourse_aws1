@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(BaseException.class)
-    public ResponseEntity<ApiResponse<Void>> handleCustomException(BaseException e) {
+    public ResponseEntity<ApiResponse<Void>> handleBaseException(BaseException e) {
         return ResponseEntity
                 .status(e.getErrorCode().getHttpStatus())
                 .body(ApiResponse.error(e.getMessage()));
