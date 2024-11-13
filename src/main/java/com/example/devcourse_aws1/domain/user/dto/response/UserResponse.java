@@ -14,17 +14,12 @@ public class UserResponse {
     private final String email;
     private final Role role;
 
-    private UserResponse(User user) {
+    public UserResponse(User user) {
         this.id = user.getUserId();
         this.loginId = user.getLoginId();
         this.name = user.getName();
         this.phone = user.getPhone();
         this.email = user.getEmail();
         this.role = user.getRole();
-    }
-
-    // 정적 팩토리 메서드
-    public static UserResponse from(User user) {
-        return new UserResponse(user);
     }
 }
